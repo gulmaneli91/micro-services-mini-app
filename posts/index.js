@@ -15,7 +15,7 @@ app.get('/posts', (req, res )=> {
 
 });
 
-app.post('/posts', async (req, res )=> {
+app.post('/posts/create', async (req, res )=> {
     const id = randomBytes(4).toString('hex');
     const { title } = req.body;
 
@@ -42,6 +42,6 @@ app.post('/posts', async (req, res )=> {
 });
 
 app.listen(4000, () => {
-    console.log('v3.0.0');
+    console.log('v3.0.1');
     console.log('listening on 4000');
 });
